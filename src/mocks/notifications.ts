@@ -1,0 +1,47 @@
+import { AppNotification } from '../types/notification';
+
+export const MOCK_NOTIFICATIONS: AppNotification[] = [
+  {
+    id: 'notif_1',
+    userId: 'usr_101',
+    title: 'Out for Delivery 🚚',
+    body: 'Your laundry order LND-20260927-001234 is out for delivery with Ramesh Kumar.',
+    category: 'Order',
+    isRead: false,
+    deepLink: 'washkart://order/ord_1001',
+    orderId: 'ord_1001',
+    createdAt: '2026-09-27T18:45:00Z',
+  },
+  {
+    id: 'notif_2',
+    userId: 'usr_101',
+    title: 'Garments Picked Up ✅',
+    body: 'We have picked up 6 garments from your home address.',
+    category: 'Order',
+    isRead: true,
+    deepLink: 'washkart://order/ord_1001',
+    orderId: 'ord_1001',
+    createdAt: '2026-09-27T14:30:00Z',
+  },
+  {
+    id: 'notif_3',
+    userId: 'usr_101',
+    title: 'Special Weekend Offer 🎁',
+    body: 'Use code WASH20 to get 20% OFF on all Dry Cleaning services this weekend!',
+    category: 'Offers',
+    isRead: false,
+    deepLink: 'washkart://offer/WASH20',
+    createdAt: '2026-09-26T10:00:00Z',
+  },
+  {
+    id: 'notif_4',
+    userId: 'usr_101',
+    title: 'Payment Confirmed 💳',
+    body: 'Payment of ₹410 for order LND-20260927-001234 received via UPI.',
+    category: 'Payment',
+    isRead: true,
+    deepLink: 'washkart://order/ord_1001',
+    orderId: 'ord_1001',
+    createdAt: '2026-09-27T14:21:00Z',
+  },
+];

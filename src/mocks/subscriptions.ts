@@ -1,0 +1,73 @@
+import { SubscriptionPlan, UserSubscription } from '../types/subscription';
+
+export const MOCK_SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
+  {
+    id: 'sub_basic',
+    name: 'Basic Care',
+    price: 499,
+    billingCycle: 'MONTHLY',
+    pickupsPerMonth: 4,
+    freeDelivery: true,
+    discountPercentage: 10,
+    priorityProcessing: false,
+    maxKgPerPickup: 5,
+    features: [
+      '4 Free Doorstep Pickups per month',
+      '10% OFF on all additional services',
+      'Free Delivery on orders above ₹199',
+      'Standard 24-48hr turnaround time',
+    ],
+    isPopular: false,
+  },
+  {
+    id: 'sub_family',
+    name: 'Family Shield',
+    price: 999,
+    billingCycle: 'MONTHLY',
+    pickupsPerMonth: 8,
+    freeDelivery: true,
+    discountPercentage: 20,
+    priorityProcessing: true,
+    maxKgPerPickup: 10,
+    features: [
+      '8 Free Pickups & Deliveries per month',
+      '20% OFF on all dry cleaning & steam press',
+      'Zero Delivery Fees (Unlimited)',
+      'Priority 24-hour turnaround',
+      'Dedicated support manager',
+    ],
+    isPopular: true,
+  },
+  {
+    id: 'sub_premium',
+    name: 'Executive Platinum',
+    price: 1499,
+    billingCycle: 'MONTHLY',
+    pickupsPerMonth: 12,
+    freeDelivery: true,
+    discountPercentage: 30,
+    priorityProcessing: true,
+    maxKgPerPickup: 15,
+    features: [
+      '12 Doorstep Pickups & Deliveries',
+      '30% OFF on Luxury & Designer Care',
+      'Free Express Same-Day Processing',
+      'Garment Insurance Coverage up to ₹10,000',
+      'Hanger & Suit Cover Packing included',
+    ],
+    isPopular: false,
+  },
+];
+
+export const MOCK_USER_SUBSCRIPTION: UserSubscription = {
+  id: 'usr_sub_991',
+  userId: 'usr_101',
+  planId: 'sub_family',
+  planName: 'Family Shield',
+  startDate: '2026-09-01',
+  endDate: '2026-10-01',
+  status: 'ACTIVE',
+  remainingPickups: 6,
+  autoRenew: true,
+  createdAt: '2026-09-01T00:00:00Z',
+};
